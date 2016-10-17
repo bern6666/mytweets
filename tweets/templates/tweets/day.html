@@ -1,0 +1,15 @@
+<!-- tweets/templates/tweets/day.html -->
+<html>
+  <head>
+      <title>Day</title>
+  </head>
+  <body>
+    <h1> The day {{day_number}} is the {{day_name}} </h1>
+
+    <ul>
+    {% for day in days %}
+      <li>  {% if forloop.counter == day_number %}<strong>  {% endif %}{{forloop.counter}} -- {{day}}{% if forloop.counter == day_number %}  </strong>{% endif %}  </li>
+    {% endfor %}
+    </ul>
+  </body>
+</html>
